@@ -1,5 +1,9 @@
 # toml-delphi
 
+> [!NOTE]
+> This is a fork of the original toml-delphi project, created for the purposes of enabling DPM support. The may or may not be ahead of the original repo as the author passed away - RIP Kiriakos Vlahos.
+
+
 TOML parser, writer and serializer for Delphi. Learn more about Tom's Obvious, Minimal Language at https://toml.io/.
 
 ###  Features:

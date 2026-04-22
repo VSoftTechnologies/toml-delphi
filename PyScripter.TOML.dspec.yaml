@@ -1,0 +1,38 @@
+# DPM package spec file
+# Used to build packages
+
+min client version: 1.0
+# metadata describes the package to the user
+metadata:
+  id: PyScripter.TOML
+  version: 1.0.0
+  authors: [ Kiriakos Vlahos ]
+  description: TOML parser, writer and serializer for Delphi
+  projectUrl: https://github.com/VSoftTechnologies/toml-delphi
+  repositoryUrl: https://github.com/VSoftTechnologies/toml-delphi
+  repositoryCommit: #HASH#
+  license: MIT
+  readme: README.md
+  copyright: Kiriakos Vlahos and contributors
+  tags: [ toml, parser ]
+
+# package folder names are a mess. 
+targetPlatforms:
+  - compiler: delphi10.4
+    platforms: [ win32, win64, linux64, macos64 ]
+  - compiler: delphi11
+    platforms: [ win32, win64, linux64, macos64 ]
+  - compiler: delphi12
+    platforms: [ win32, win64, linux64, macos64 ]
+  - compiler: delphi13
+    platforms: [ win32, win64, winarm64ec, linux64, macos64, macosarm64 ]
+
+templates:
+  - name: default
+    source:
+      - src: ./LICENSE
+      - src: ./sources/*.pas
+      - src: ./packages/PyScripter.TOMLR.dpk
+      - src: ./packages/PyScripter.TOMLR.dproj
+    build:
+      - project: ./packages/PyScripter.TOMLR.dproj
