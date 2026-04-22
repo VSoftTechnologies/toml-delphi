@@ -21,9 +21,9 @@ targetPlatforms:
   - compiler: delphi10.4
     platforms: [ win32, win64, linux64, macos64 ]
   - compiler: delphi11
-    platforms: [ win32, win64, linux64, macos64 ]
+    platforms: [ win32, win64, linux64, macos64, macosarm64 ]
   - compiler: delphi12
-    platforms: [ win32, win64, linux64, macos64 ]
+    platforms: [ win32, win64, linux64, macos64, macosarm64 ]
   - compiler: delphi13
     platforms: [ win32, win64, winarm64ec, linux64, macos64, macosarm64 ]
 
