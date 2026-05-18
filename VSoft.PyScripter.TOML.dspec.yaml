@@ -4,7 +4,7 @@
 min client version: 1.0
 # metadata describes the package to the user
 metadata:
-  id: PyScripter.TOML
+  id: VSoft.PyScripter.TOML
   version: 1.0.0
   authors: [ Kiriakos Vlahos ]
   description: TOML parser, writer and serializer for Delphi
