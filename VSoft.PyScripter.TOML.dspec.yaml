@@ -16,15 +16,16 @@ metadata:
   copyright: Kiriakos Vlahos and contributors
   tags: [ toml, parser ]
 
-# package folder names are a mess. 
+variables:
+  packageSource: Rad Studio $compilernoprefix$ 
+
 targetPlatforms:
   - compiler: delphi10.4
     platforms: [ win32, win64, linux64, macos64 ]
-  - compiler: delphi11
+  - compiler from: delphi11.0
+    compiler to: delphi12.0
     platforms: [ win32, win64, linux64, macos64, macosarm64 ]
-  - compiler: delphi12
-    platforms: [ win32, win64, linux64, macos64, macosarm64 ]
-  - compiler: delphi13
+  - compiler: delphi13.0
     platforms: [ win32, win64, winarm64ec, linux64, macos64, macosarm64 ]
 
 templates:
@@ -32,7 +33,7 @@ templates:
     source:
       - src: ./LICENSE
       - src: ./sources/*.pas
-      - src: ./packages/PyScripter.TOMLR.dpk
-      - src: ./packages/PyScripter.TOMLR.dproj
+      - src: ./packages/$packageSource$/PyScripter.TOMLR.dpk
+      - src: ./packages/$packageSource$/PyScripter.TOMLR.dproj
     build:
-      - project: ./packages/PyScripter.TOMLR.dproj
+      - project: ./packages/$packageSource$/PyScripter.TOMLR.dproj

@@ -1,11 +1,11 @@
-package PyScripter.TOMLR;
+﻿package PyScripter.TOMLR;
 
 {$R *.res}
 {$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
 {$ALIGN 8}
 {$ASSERTIONS ON}
 {$BOOLEVAL OFF}
-{$DEBUGINFO OFF}
+{$DEBUGINFO ON}
 {$EXTENDEDSYNTAX ON}
 {$IMPORTEDDATA ON}
 {$IOCHECKS ON}
@@ -25,16 +25,17 @@ package PyScripter.TOMLR;
 {$IMAGEBASE $400000}
 {$DEFINE DEBUG}
 {$ENDIF IMPLICITBUILDING}
-{$IMPLICITBUILD ON}
+{$LIBSUFFIX AUTO}
+{$RUNONLY}
+{$IMPLICITBUILD OFF}
 
 requires
   rtl;
 
 contains
-  TOML.Parser in '..\sources\TOML.Parser.pas',
-  TOML in '..\sources\TOML.pas',
-  TOML.Scanner in '..\sources\TOML.Scanner.pas',
-  TOML.Support in '..\sources\TOML.Support.pas',
-  TOML.Writer in '..\sources\TOML.Writer.pas';
-
+  TOML.Parser in '..\..\sources\TOML.Parser.pas',
+  TOML in '..\..\sources\TOML.pas',
+  TOML.Scanner in '..\..\sources\TOML.Scanner.pas',
+  TOML.Support in '..\..\sources\TOML.Support.pas',
+  TOML.Writer in '..\..\sources\TOML.Writer.pas';
 end.

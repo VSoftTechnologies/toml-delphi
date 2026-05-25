@@ -22,7 +22,7 @@ unit TOML.Support;
 interface
 
 uses
-  SysUtils;
+  System.SysUtils;
 
 const
   CharSetBareKey = ['0'..'9', 'a'..'z','A'..'Z','_','-'];
